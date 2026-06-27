@@ -5,6 +5,12 @@ Welcome to my learning and practice sandbox! This repository houses a structured
 
 It covers fundamental software engineering concepts, database management, and web development technologies.
 
+> [!NOTE]
+> **💡 Academic Integrity & Development Note / Akademik Dürüstlük ve Geliştirme Notu**
+> All codes, logic, and exercises in this repository have been written **completely by hand** for educational and research purposes. None of the codes were generated using AI assistants. The goal was to fully grasp programming logic, syntax structure, and algorithms step-by-step.
+> 
+> *Bu depodaki tüm kodlar, algoritmalar ve egzersizler yazılım mantığını, sentaks yapısını ve problem çözme becerilerini sıfırdan öğrenmek amacıyla **tamamen elle (manuel olarak)** yazılmıştır. Geliştirme sürecinde yapay zeka araçları kullanılmamış olup, tamamen akademik ve kişisel eğitim amaçlıdır.*
+
 ---
 
 ## 📂 Repository Structure
