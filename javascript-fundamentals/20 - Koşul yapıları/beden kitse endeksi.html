@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let kilo  = Number (prompt("Lütfen Kilonuzu Giriniz"));
+
+    let boy   =  Number (prompt("Lütfen Metre cinsinden Boyunuzu Giriniz"));
+
+    let sonuc = kilo/(boy*boy);
+
+    if(sonuc<18.5){
+        console.log("İdeal kilonuzun altında"+ sonuc);
+    }
+    else if(sonuc<24.9 && sonuc>=18.5){
+        console.log("ideal kilonuz altında"+ sonuc);
+    }
+    else if(sonuc<29.9 && sonuc>=25){
+        console.log("İdeal kilo"+ sonuc);
+    }
+    else if(sonuc<39.9 && sonuc>=30){
+        console.log("İdeal kilonuzun üstündesiniz"+ sonuc);
+    }
+    else if(sonuc == 40){
+        console.log("Obezsiniz"+ sonuc);
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+// length                       - String’in uzunluğunu verir.
+// toUpperCase()                - Tüm harfleri büyük harfe çevirir.
+// toLowerCase()                - Tüm harfleri küçük harfe çevirir.
+// trim()                       - Baştaki ve sondaki boşlukları kaldırır.
+// trimStart()                  - Sadece baştaki boşlukları kaldırır.
+// trimEnd()                    - Sadece sondaki boşlukları kaldırır.
+// slice(start, end)            - Belirtilen aralıktaki karakterleri alır.
+// substring(start, end)        - Negatif değer kabul etmeden aralıktaki karakterleri döner.
+// substr(start, length)        - Belirtilen yerden başlayarak belirtilen uzunlukta karakter alır.
+// charAt(index)                - Belirtilen sıradaki karakteri döner.
+// indexOf(value)               - Karakterin ilk bulunduğu index’i döner, yoksa -1.
+// lastIndexOf(value)           - Karakterin son bulunduğu index’i döner.
+// includes(value)              - String, verilen değeri içeriyor mu, true/false döner.
+// startsWith(value)            - Verilen değerle başlayıp başlamadığını kontrol eder.
+// endsWith(value)              - Verilen değerle bitip bitmediğini kontrol eder.
+// replace(eski, yeni)          - İlk eşleşen ifadeyi yenisiyle değiştirir.
+// replaceAll(eski, yeni)       - Tüm eşleşen ifadeleri yenisiyle değiştirir.
+// repeat(sayı)                 - Belirtilen sayıda string’i tekrar eder.
+// split(ayırıcı)               - String’i verilen ayırıcıya göre diziye çevirir.
+// concat(string)               - Stringleri birleştirir.
+// match(regex)                 - Regex (düzenli ifade) eşleşmelerini dizi olarak döner.
+// search(regex)                - Regex ile eşleşen ilk değerin index’ini döner.
+// padStart(uzunluk, karakter)  - Başına belirtilen karakteri ekleyerek string’i uzatır.
+// padEnd(uzunluk, karakter)    - Sonuna belirtilen karakteri ekleyerek string’i uzatır.
+// localeCompare()              - İki string’i dil kurallarına göre karşılaştırır.

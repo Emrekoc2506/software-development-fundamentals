@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kitap Rafı</title>
+</head>
+<body>
+<script>
+    // Kitapların bilgilerini obje olarak oluşturuyoruz
+    let kitap1 = {isim: "Cengiz Han", yazar: "Yunus Oğuz", fiyat: 302, raf: "1.1 Raf"};
+    let kitap2 = {isim: "Dilek Kıyısı", yazar: "Rojda Akbay", fiyat: 200, raf: "1.2 Raf"};
+    let kitap3 = {isim: "Wapshot Skandalı", yazar: "John Cheever", fiyat: 256, raf: "1.3 Raf"};
+    let kitap4 = {isim: "Ben Ölmeden Önce", yazar: "Meryem Nart", fiyat: 252, raf: "2.1 Raf"};
+    let kitap5 = {isim: "Beyoğlu Sevgilim", yazar: "Hasan Öztoprak", fiyat: 168, raf: "2.2 Raf"};
+    let kitap6 = {isim: "İçimdeki Okyanus", yazar: "Sally J. Pla", fiyat: 165, raf: "2.3 Raf"};
+    let kitap7 = {isim: "Münevver", yazar: "Güzide Sabri", fiyat: 250, raf: "3.1 Raf"};
+    let kitap8 = {isim: "Topaç", yazar: "Gülayşe Koçak", fiyat: 240, raf: "3.2 Raf"};
+    let kitap9 = {isim: "İyi Geceler", yazar: "Sadettin Biçer", fiyat: 102, raf: "3.3 Raf"};
+
+    // Tüm kitapları bir dizi içinde topluyoruz
+    let kitaplar = [kitap1, kitap2, kitap3, kitap4, kitap5, kitap6, kitap7, kitap8, kitap9];
+
+    // Raf nesnelerini oluşturuyoruz, başta tümü gizli (goster:false)
+    let raf11 = {kod: "1.1 Raf", goster: false};
+    let raf12 = {kod: "1.2 Raf", goster: false};
+    let raf13 = {kod: "1.3 Raf", goster: false};
+    let raf21 = {kod: "2.1 Raf", goster: false};
+    let raf22 = {kod: "2.2 Raf", goster: false};
+    let raf23 = {kod: "2.3 Raf", goster: false};
+    let raf31 = {kod: "3.1 Raf", goster: false};
+    let raf32 = {kod: "3.2 Raf", goster: false};
+    let raf33 = {kod: "3.3 Raf", goster: false};
+
+    // Rafları iki boyutlu dizi şeklinde düzenliyoruz (3 satır, 3 sütun)
+    let raflar = [
+        [raf33, raf32, raf31], // 3. kat
+        [raf23, raf22, raf21], // 2. kat
+        [raf13, raf12, raf11]  // 1. kat
+    ];
+
+    // Rafların console'da görünümünü sağlar
+    function rafOlusturma() {
+        console.clear(); // Önce console'u temizle
+        let satir = "";
+        for(let i = 0; i < raflar.length; i++) { // her satır için
+            for(let j = 0; j < 3; j++) {         // her sütun için
+                // Eğer goster true ise raf kodunu yaz, değilse '---' yaz
+                satir += "|" + (raflar[i][j].goster ? raflar[i][j].kod : "---") + "|";
+            }
+            console.log(satir);       // satırı console'a yazdır
+            console.log("---------------"); // satır alt çizgisi
+            satir = "";               // sonraki satır için sıfırla
+        }
+    }
+
+    // Kullanıcının verdiği kitap ismine göre raf kodunu bulur
+    function kodBul(kitapIsmi) {
+        kitapIsmi = kitapIsmi.trim().toLocaleUpperCase(); // girilen ismi büyük harfe çevir ve boşlukları sil
+        for(let i = 0; i < kitaplar.length; i++) {         // tüm kitaplar arasında dolaş
+            let kitapAdi = kitaplar[i].isim.trim().toLocaleUpperCase(); // kitap ismini aynı şekilde hazırla
+            if(kitapAdi.includes(kitapIsmi)) {             // eğer kitap ismi içinde aranan varsa
+                return kitaplar[i].raf;                     // o kitabın raf kodunu döndür
+            }
+        }
+        return null; // bulunamazsa null döndür
+    }
+
+    // Raf kodu verilen rafı görünür yapar (goster = true)
+    function raftaGoster(rafKodu) {
+        for(let i = 0; i < raflar.length; i++) {
+            for(let j = 0; j < 3; j++) {
+                // Raf kodlarını büyük harf yapıp karşılaştırıyoruz, hata olmasın diye
+                if(raflar[i][j].kod.toLocaleUpperCase() === rafKodu.toLocaleUpperCase()) {
+                    raflar[i][j].goster = true; // rafı görünür yap
+                    return; // bulunduğu için fonksiyondan çık
+                }
+            }
+        }
+    }
+
+    // Programın başlangıcında raf görünümünü yazdır
+    rafOlusturma();
+
+    // Kullanıcıdan kitap ismini prompt ile alıyoruz
+    let kitapIsmi = prompt("Kitap ismi giriniz:");
+
+    // Eğer kullanıcı bir şey yazdıysa devam et
+    if(kitapIsmi) {
+        let rafKod = kodBul(kitapIsmi); // kitap ismine göre raf kodunu bul
+        if(rafKod) {                     // raf kodu bulunduysa
+            raftaGoster(rafKod);          // rafı görünür yap
+            rafOlusturma();               // console'a güncel raf görünümünü yazdır
+            console.log("Kitap bulundu. Raf: " + rafKod); // bilgi mesajı
+        } else {                        // raf kodu bulunamadıysa
+            alert("Böyle bir kitap yok."); // kullanıcıyı uyar
+        }
+    } else {
+        alert("Geçerli bir kitap ismi girmediniz."); // boş girişte uyar
+    }
+
+</script>
+</body>
+</html>

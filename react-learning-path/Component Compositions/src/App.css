@@ -1,0 +1,60 @@
+/* --- 1. Header (Navbar) Genel Görünümü --- */
+/* Mevcut 'bg-primary' rengini modern bir gradient ile eziyoruz (!important ile) */
+nav.bg-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important; /* Mor-Mavi Geçiş */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Güçlü, havalı bir gölge */
+  min-height: 80px; /* Biraz daha geniş ve ferah olsun */
+  
+  /* Sayfa aşağı kaysa bile üstte sabit kalsın */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  
+  /* İçerikleri dikeyde tam ortala */
+  display: flex;
+  align-items: center;
+}
+
+/* --- 2. Arama Kutusu (Input) --- */
+/* Sadece nav içindeki input'u hedefler */
+nav .form-control {
+  background-color: rgba(255, 255, 255, 0.15); /* Cam Efekti (Yarı saydam) */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px; /* Tam oval kenarlar */
+  color: white !important; /* İçine yazılan yazı beyaz olsun */
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+/* Placeholder (Lütfen yazınız...) rengi */
+nav .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Input'a tıklayınca (Focus) */
+nav .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.25); /* Biraz daha beyazlaşsın */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Dışarıya ışık saçsın */
+  border-color: rgba(255, 255, 255, 0.5);
+  color: white;
+}
+
+/* --- 3. Sağdaki Yazı ve Sayı (6 kayıt...) --- */
+/* Son sütunu sağa yaslamak için */
+nav .col-4:last-child {
+  text-align: right;
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/* Kalın sayı (strong etiketi) tasarımı */
+nav strong {
+  background-color: #ffd700; /* Altın sarısı kutu */
+  color: #333; /* Koyu renk yazı */
+  padding: 4px 12px; /* Etrafına boşluk */
+  border-radius: 12px; /* Köşeleri yuvarlat */
+  margin-right: 8px; /* Yazıdan uzaklaştır */
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4); /* Sarı parlama */
+}

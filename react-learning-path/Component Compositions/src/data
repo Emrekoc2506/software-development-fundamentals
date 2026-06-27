@@ -1,0 +1,86 @@
+const movie_list = [
+  {
+    Id: "157336",
+    Title: "Interstellar",
+    Year: "2014",
+    Poster:
+      "https://image.tmdb.org/t/p/original/gEU2QniL6C8z1dY4kdDe3766NNB.jpg",
+  },
+  {
+    Id: "155",
+    Title: "The Dark Knight",
+    Year: "2008",
+    Poster:
+      "https://image.tmdb.org/t/p/original/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+  },
+  {
+    Id: "27205",
+    Title: "Inception",
+    Year: "2010",
+    Poster:
+      "https://image.tmdb.org/t/p/original/9gk7admal4zl248Q5QLER7U3Mrv.jpg",
+  },
+  {
+    Id: "603",
+    Title: "The Matrix",
+    Year: "1999",
+    Poster:
+      "https://image.tmdb.org/t/p/original/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+  },
+  {
+    Id: "299534",
+    Title: "Avengers: Endgame",
+    Year: "2019",
+    Poster:
+      "https://image.tmdb.org/t/p/original/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+  },
+  {
+    Id: "120",
+    Title: "The Lord of the Rings: The Fellowship of the Ring",
+    Year: "2001",
+    Poster:
+      "https://image.tmdb.org/t/p/original/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
+  },
+  {
+    Id: "680",
+    Title: "Pulp Fiction",
+    Year: "1994",
+    Poster:
+      "https://image.tmdb.org/t/p/original/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
+  },
+  {
+    Id: "13",
+    Title: "Forrest Gump",
+    Year: "1994",
+    Poster:
+      "https://image.tmdb.org/t/p/original/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg",
+  },
+  {
+    Id: "769",
+    Title: "GoodFellas",
+    Year: "1990",
+    Poster:
+      "https://image.tmdb.org/t/p/original/aKuFiU82s5ISJpGZp7YkIr3kCUd.jpg",
+  },
+  {
+    Id: "424",
+    Title: "Schindler's List",
+    Year: "1993",
+    Poster:
+      "https://image.tmdb.org/t/p/original/sF1U4EUQS8YHUYjNl3pTXMYnjJC.jpg",
+  },
+  {
+    Id: "550",
+    Title: "Fight Club",
+    Year: "1999",
+    Poster:
+      "https://image.tmdb.org/t/p/original/pB8BM7pdSp6B6Ih7Qf4n6a8mi75.jpg",
+  },
+  {
+    Id: "238",
+    Title: "The Godfather",
+    Year: "1972",
+    Poster:
+      "https://image.tmdb.org/t/p/original/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+  }
+];

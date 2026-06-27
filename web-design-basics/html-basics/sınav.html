@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Input/Button Uygulaması</title>
+</head>
+<body>
+
+<h3>INPUT/BUTTON UYGULAMASI</h3>
+<p>BUTON'a TIKLA VE GÖR!</p>
+
+<input type="button" id="myBtn" onclick="myFunction()" value="TIKLA">
+
+<p id="deneme"></p>
+
+<script>
+function myFunction() {
+var x = document.getElementById("myBtn").value;
+document.getElementById("deneme").innerHTML = x;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+npx create-react-app x
+cd x
+npm start
+2025STAGE2.EMRE.KOC
+
+npm create vite@latest
+npx json-server --watch api/db.json

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+
+
+//🔤 Temel String Metotları:
+
+
+
+// length
+let str = "Merhaba";
+console.log(str.length); // 7
+
+// toUpperCase()
+console.log(str.toUpperCase()); // "MERHABA"
+
+// toLowerCase()
+console.log(str.toLowerCase()); // "merhaba"
+
+// trim()
+let s = "  selam  ";
+console.log(s.trim()); // "selam"
+
+// trimStart()
+console.log(s.trimStart()); // "selam  "
+
+// trimEnd()
+console.log(s.trimEnd()); // "  selam"
+
+
+
+//✂️ Parçalama & Alma:
+
+
+
+// slice(start, end)
+console.log(str.slice(1, 4)); // "erb"
+
+// substring(start, end)
+console.log(str.substring(1, 4)); // "erb"
+
+// substr(start, length)
+console.log(str.substr(1, 3)); // "erb"
+
+// charAt(index)
+console.log(str.charAt(0)); // "M"
+
+
+
+//🔍 Arama & Karşılaştırma:
+
+
+
+// indexOf()
+console.log(str.indexOf("a")); // 3
+
+// lastIndexOf()
+console.log(str.lastIndexOf("a")); // 5
+
+// includes()
+console.log(str.includes("ha")); // true
+
+// startsWith()
+console.log(str.startsWith("Mer")); // true
+
+// endsWith()
+console.log(str.endsWith("ba")); // true
+
+
+
+//🔁 Değiştirme & Tekrar:
+
+
+
+// replace()
+let t = "Bugün hava güzel";
+console.log(t.replace("güzel", "yağmurlu")); // "Bugün hava yağmurlu"
+
+// replaceAll()
+let d = "test test test";
+console.log(d.replaceAll("test", "deneme")); // "deneme deneme deneme"
+
+// repeat()
+console.log("ha".repeat(3)); // "hahaha"
+
+
+
+//🔗 Bölme & Birleştirme:
+
+
+
+// split()
+let kelimeler = "elma,armut,muz";
+console.log(kelimeler.split(",")); // ["elma", "armut", "muz"]
+
+// concat()
+let a = "Merhaba";
+let b = "Dünya";
+console.log(a.concat(" ", b)); // "Merhaba Dünya"
+
+
+
+
+//🧠 Regex & Karşılaştırma:
+
+
+
+// match()
+let m = "123abc456";
+console.log(m.match(/\d+/g)); // ["123", "456"]
+
+// search()
+console.log(m.search(/[a-z]/)); // 3
+
+// localeCompare()
+console.log("a".localeCompare("b")); // -1 (sözlük sıralamasına göre karşılaştırır)
+
+
+
+//⬅️➡️ Karakter Eklemek:
+
+
+
+// padStart()
+let n = "5";
+console.log(n.padStart(3, "0")); // "005"
+
+// padEnd()
+console.log(n.padEnd(3, "0")); // "500"
+
+
+
+</script>
+</body>
+</html>

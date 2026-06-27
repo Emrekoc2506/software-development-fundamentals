@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let metin = "Merhaba"
+    let harf = (prompt("hangi harfi istiyosun"))
+    let sonuc = bul(harf)
+    alert(`"${harf}" harfi metin içinde ${sonuc} kez geçiyor.`);
+
+    function bul (harf){
+        let toplam = 0
+        for(let i = 0 ; i < metin.length; i++){
+            if(metin.charAt(i)=== harf){
+                toplam+=1;
+            }
+        }
+        return toplam;
+    }
+
+</script>
+</body>
+</html>

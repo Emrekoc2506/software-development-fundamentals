@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+// 1 den 10 a kadar yazdır
+/**
+*!let sayac = 1
+*!do{
+*!   console.log(sayac);
+*!   sayac++
+*!}while(sayac<=10)*/
+//koşul saglanmasa bile döngü bir kere çalışır ve ekrana ehliyet alabilirisniz yazar
+/**
+*!let yas = 23;
+*!do {
+*!    console.log("Ehliyeti alabilirsiniz");
+*!
+*!} while (yas>=25);
+*/
+
+let sayac = 1;
+let toplam = 0;
+do {
+    if(sayac%2==1){
+        toplam+=sayac;
+    }
+    sayac++;
+} while (sayac<=20);
+console.log("toplam :", toplam);
+
+</script>
+</body>
+</html>

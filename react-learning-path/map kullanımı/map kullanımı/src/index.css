@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.list-container {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}
+
+ul {
+  list-style-type: none; /* Noktaları kaldırır */
+  padding: 0;
+}
+
+.car-item {
+  background-color: white;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.car-item:last-child {
+  border-bottom: none;
+}
+
+.car-item span {
+  font-size: 0.9rem;
+  color: #555;
+  margin-left: 10px;
+}

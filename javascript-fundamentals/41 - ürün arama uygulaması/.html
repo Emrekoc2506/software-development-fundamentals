@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let urun1 = {
+        isim : "HP 15",
+        kategori  : "teknoloji",
+        fiyat : 11.000
+    }
+    let urun2 = {
+        isim : "HP Victus",
+        kategori  : "teknoloji",
+        fiyat : 25.899 
+    }    
+    let urun3 = {
+        isim : "HP 14",
+        kategori  : "teknoloji",
+        fiyat : 11.000
+    }    
+    let urun4 = {
+        isim : "LENOVO Ideapad",
+        kategori  : "teknoloji",
+        fiyat : 8.000
+    }    
+    let urun5 = {
+        isim : "LENOVO LOQ",
+        kategori  : "teknoloji",
+        fiyat : 26.299 
+    }    
+    let urun6 = {
+        isim : "CASPER Nirvana",
+        kategori  : "teknoloji",
+        fiyat : 9.000
+    }    
+    let urun7 = {
+        isim : "CASPER Excalibur",
+        kategori  : "teknoloji",
+        fiyat :36.999 
+    }    
+    let urun8 = {
+        isim : "ACER Nitro",
+        kategori  : "teknoloji",
+        fiyat : 50.800 
+    }
+
+    let urunler = [urun1,urun2,urun3,urun4,urun5,urun6,urun7,urun8];
+    let filterliurunler = [];
+    let kullaniciGirdigi = prompt("Bir isim giriniz");
+    
+    filterliurunlerDoldur(urunler);
+    filterliurunleryazdir(filterliurunler);
+
+    function filterliurunlerDoldur(urunler){
+        urunler.forEach(function(urun){
+            if (urun.isim.toUpperCase().includes(kullaniciGirdigi.toUpperCase(),0)){
+            filterliurunler.push(urun);
+            }
+        });
+    }
+
+    function filterliurunleryazdir(urunler) {
+        urunler.forEach(function(urun) {
+        console.log("---------------------------");
+        console.log("|" + urun.isim + "|" + urun.fiyat + "|" + urun.kategori);
+        });
+    }
+
+</script>
+</body>
+</html>

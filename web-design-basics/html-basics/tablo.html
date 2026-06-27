@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    -table: tablo 
+    -tr (table row): tablonun için satır oluşturma
+    -td (Table Data): tablodaki satırları böylemk için kullanılır
+    -th (Table hader): tabloya başlık ekler
+    -border: çerçeve ekler ve table inin içine yazılır yazdıgımız sayıda büyüklügünü temsil eder
+    - Rowspan: satırları birleştiemk için kullanılıyor   colspan :sütünları birleştirmek için kullanılıyor
+    -->
+    <table border="2"> 
+
+        <tr>
+            <th colspan="3">Kişisel Bilgiler</th>
+        </tr>
+
+        <tr>
+            <th>isim</th>
+            <th>soy isim</th>
+            <th>yaş</th>
+            <th>Irk</th>
+        </tr>
+
+        <tr>
+            <td>Emre </td>
+            <td>Koç </td>
+            <td>20 </td>
+            <td rowspan="2">Türk</td>
+        </tr>
+
+        <tr>
+            <td>Alpaslan</td>
+            <td>Koç</td>
+            <td>48</td>
+        </tr>
+    </table>
+</body>
+</html>

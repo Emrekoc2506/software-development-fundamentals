@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bootstrap Grid Test</title>
+
+<link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+/>
+</head>
+<body>
+<div class="container mt-4">
+    <form>
+    <div class="mb-3">
+        <label 
+        class="form-label" 
+        for="user-name">Kullanıcı Adı</label>
+        <input
+        class="form-control form-control-lg"
+        type="text"
+        id="user-name"
+        placeholder="Buraya girinzi"
+        />
+        <div class="mb-3">
+        <label class="form-label" for="mail">Mail giriniz</label>
+        <input
+        class="form-control "
+        type="mail"
+        id="mail"
+        placeholder="Buraya giriniz"
+        />
+        <div class="mb-3">
+        <label class="form-label" for="adsoyad">Ad ve Soyad giriniz</label>
+        <input
+        class="form-control form-control-sm"
+        type="text"
+        id="adsoyad"
+        placeholder="Buraya giriniz"
+        />
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+        <input 
+class="form-control"                  
+type="text"                          
+placeholder="Disabled input"         
+aria-label="Disabled input example" 
+disabled                            
+>
+
+<!--
+class="form-control": Bootstrap kutu stili
+type="text": metin kutusu
+placeholder: kutu boşken görünen ipucu yazısı
+aria-label: ekran okuyucular için açıklama
+disabled: kullanıcı giriş yapamaz, alan pasif
+-->
+
+<input 
+class="form-control"                   
+type="text"                           
+value="Disabled readonly input"      
+aria-label="Disabled input example"  
+disabled                            
+readonly                             
+>
+
+<!--
+class="form-control": Bootstrap kutu stili
+type="text": metin kutusu
+value: kutunun içinde yazılı metin
+aria-label: ekran okuyucu açıklaması
+disabled: kullanıcı giriş yapamaz
+readonly: sadece okunur, düzenlenemez
+-->
+
+
+    </div>
+    </form>
+</div>
+</body>
+</html>

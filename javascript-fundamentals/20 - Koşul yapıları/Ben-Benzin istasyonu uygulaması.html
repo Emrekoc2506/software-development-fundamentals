@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let dizel     = 50
+    let benzin    = 45
+    let lpg       = 30
+    let yakitturu =prompt("Yakıt Türünü Seçiniz")
+    yakitturu = yakitturu?.toLowerCase().trim();
+    let litre     = Number(prompt("kaç litre yakıt alıncak"))
+
+    if(yakitturu==="dizel"){
+        if(0<litre){
+            console.log(dizel*litre);
+        }
+        else{
+            alert("Geçerli dizel litre seçiniz")
+        }
+    }
+
+    else if(yakitturu==="benzin"){
+        if(0<litre){
+            console.log(benzin*litre);
+        }
+        else{
+            alert("Geçerli benzin litresi seçiniz")
+        }
+    }
+
+    else if(yakitturu==="lpg"){
+        if(0<litre){
+            console.log(lpg*litre);
+        }
+        else{
+            alert("Geçerli dizel litresi seçiniz")
+        }
+    }
+
+    else{
+        alert("Geçerli bir yakıt türü seçiniz")
+    }
+
+</script>
+</body>
+</html>

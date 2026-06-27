@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript"lang="javascript">
+        /**
+        *! typeof     = Degişkenin veri türünü geri döndürür 
+        *?(Degişkenin veri türünü ekranda gösteriyo anladıgım kadarı ile)
+        */
+
+        var isim      = "Emre";                       // String
+        var sayi      = 9;                            // Number
+        var mantiksal =true;                          // Boolean
+        var isimler   = ["Emre","Zeynep"];            // Array 
+        var isimler2   = new Array ("Emre","Zeynep");  // Array (objeck) not : new ile çagrırken verileri köşeli parantez ( [] ) ile yazılamaz
+        var nesneler  = new Object();                 // Object
+        var bos       = "";                           // Undefined
+        var tanimsiz;                                 // Undefined
+        
+        var depo1      = typeof(isim);       // 
+        document.write(depo1 + "<br />");
+        document.write(typeof(isim) + "<br><br>");
+
+        var depo2      = typeof(sayi);       // 
+        document.write(depo2 + "<br />");
+        document.write(typeof(sayi) + "<br><br>");
+
+        var depo3      = typeof(mantiksal);       //  
+        document.write(depo3 + "<br />");
+        document.write(typeof(mantiksal) + "<br><br>");
+
+        var depo4      = typeof(isimler);       // 
+        document.write(depo4 + "<br />");
+        document.write(typeof(isimler) + "<br><br>");
+
+        var depo5      = typeof(isimler2);       // 
+        document.write(depo5 + "<br />");
+        document.write(typeof(isimler2) + "<br><br>");
+
+        var depo6      = typeof(nesneler);       // 
+        document.write(depo6 + "<br />");
+        document.write(typeof(nesneler) + "<br><br>");
+
+        var depo7      = typeof(bos);       // 
+        document.write(depo7 + "<br />");
+        document.write(typeof(bos) + "<br><br>");
+
+        var depo8      = typeof(tanimsiz);       // 
+        document.write(depo8 + "<br />");
+        document.write(typeof(tanimsiz) + "<br><br>");
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

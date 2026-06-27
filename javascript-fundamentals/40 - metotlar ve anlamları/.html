@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+// push() - Dizinin sonuna eleman ekler.
+let arr = [1, 2, 3];
+arr.push(4); // arr şimdi [1, 2, 3, 4]
+
+// pop() - Dizinin son elemanını çıkarır ve döner.
+let sonEleman = arr.pop(); // sonEleman = 4, arr = [1, 2, 3]
+
+// shift() - Dizinin ilk elemanını çıkarır ve döner.
+let ilkEleman = arr.shift(); // ilkEleman = 1, arr = [2, 3]
+
+// unshift() - Dizinin başına eleman ekler.
+arr.unshift(0); // arr şimdi [0, 2, 3]
+
+// forEach() - Dizinin her elemanı için verilen fonksiyonu çalıştırır (döngü gibi).
+arr.forEach(item => {
+  console.log(item); // Sırasıyla 0, 2, 3 yazdırır
+});
+
+// map() - Dizinin her elemanına fonksiyon uygular ve yeni bir dizi döner.
+let yeniDizi = arr.map(x => x * 2); // yeniDizi = [0, 4, 6]
+
+// filter() - Şartı sağlayan elemanlardan yeni dizi oluşturur.
+let ciftSayilar = arr.filter(x => x % 2 === 0); // ciftSayilar = [0, 2]
+
+// find() - Şartı sağlayan ilk elemanı döner.
+let ilkCift = arr.find(x => x % 2 === 0); // ilkCift = 0
+
+// findIndex() - Şartı sağlayan ilk elemanın indeksini döner.
+let ilkCiftIndex = arr.findIndex(x => x % 2 === 0); // ilkCiftIndex = 0
+
+// includes() - Dizide belirtilen eleman var mı, boolean döner.
+let varMi = arr.includes(2); // true
+
+// indexOf() - Elemanın dizideki ilk indeksini döner, yoksa -1.
+let indeks = arr.indexOf(3); // 2
+
+// slice() - Dizinin belirtilen aralıktaki kısmını yeni dizi olarak döner.
+let parca = arr.slice(1, 3); // parca = [2, 3]
+
+// splice() - Diziden eleman siler ve/veya ekler, değişiklik yapar.
+arr.splice(1, 1, 5); // 1. indexten 1 eleman sil, yerine 5 ekle
+// arr şimdi [0, 5, 3]
+
+// concat() - Dizileri birleştirip yeni dizi oluşturur.
+let birlesik = arr.concat([7, 8]); // [0, 5, 3, 7, 8]
+
+// join() - Dizinin elemanlarını birleştirip string yapar.
+let metin = arr.join(", "); // "0, 5, 3"
+
+// reverse() - Diziyi tersine çevirir (yerinde değiştirir).
+arr.reverse(); // arr = [3, 5, 0]
+
+// sort() - Diziyi sıralar (string sıralaması varsayılan).
+arr.sort(); // arr = [0, 3, 5]
+
+// every() - Tüm elemanlar şartı sağlıyorsa true döner.
+let hepsiPozitif = arr.every(x => x > 0); // false (çünkü 0 var)
+
+// some() - En az bir eleman şartı sağlıyorsa true döner.
+let enAzBirPozitif = arr.some(x => x > 0); // true
+
+// reduce() - Dizinin elemanlarını tek bir değere indirger.
+let toplam = arr.reduce((acc, val) => acc + val, 0); // toplam = 8 (3+5+0)
+
+</script>
+</body>
+</html>

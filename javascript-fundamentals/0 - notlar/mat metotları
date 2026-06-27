@@ -1,0 +1,27 @@
+| Metot                     | Ne Yapar?                                            Örnek                                                          |
+| ------------------------- | ---------------------------------------------------- | ------------------------------------------------------------ |
+| `length`                  | String uzunluğunu döner                              | `"Merhaba".length` -> `7`                                    |
+| `toUpperCase()`           | Stringi büyük harfe çevirir                          | `"merhaba".toUpperCase()` -> `"MERHABA"`                     |
+| `toLowerCase()`           | Stringi küçük harfe çevirir                          | `"MERHABA".toLowerCase()` -> `"merhaba"`                     |
+| `trim()`                  | Baştaki ve sondaki boşlukları siler                  | `"  selam  ".trim()` -> `"selam"`                            |
+| `trimStart()`             | Baştaki boşlukları siler                             | `"  selam  ".trimStart()` -> `"selam  "`                     |
+| `trimEnd()`               | Sondaki boşlukları siler                             | `"  selam  ".trimEnd()` -> `"  selam"`                       |
+| `slice(start, end)`       | Belirtilen aralıktaki karakterleri döner             | `"Merhaba".slice(1,4)` -> `"erb"`                            |
+| `substring(start, end)`   | slice gibi ama negatif indeks kabul etmez            | `"Merhaba".substring(1,4)` -> `"erb"`                        |
+| `substr(start, length)`   | Başlangıçtan itibaren belirtilen uzunluk kadar döner | `"Merhaba".substr(1,3)` -> `"erb"`                           |
+| `charAt(index)`           | Belirtilen indeksteki karakteri döner                | `"Merhaba".charAt(0)` -> `"M"`                               |
+| `indexOf(substring)`      | İlk geçen konumunu döner (bulamazsa -1 döner)        | `"Merhaba".indexOf("a")` -> `3`                              |
+| `lastIndexOf(substring)`  | Son geçen konumunu döner                             | `"Merhaba".lastIndexOf("a")` -> `5`                          |
+| `includes(substring)`     | Var mı yok mu boolean döner                          | `"Merhaba".includes("ha")` -> `true`                         |
+| `startsWith(substring)`   | Başlangıcı kontrol eder boolean döner                | `"Merhaba".startsWith("Mer")` -> `true`                      |
+| `endsWith(substring)`     | Sonu kontrol eder boolean döner                      | `"Merhaba".endsWith("ba")` -> `true`                         |
+| `replace(old, new)`       | İlk bulduğu eskiyi yenisiyle değiştirir              | `"hava güzel".replace("güzel","yağmurlu")`->"hava yağmurlu"` |
+| `replaceAll(old, new)`    | Tüm eşleşenleri değiştirir                           | `"test test".replaceAll("test","deneme")` -> `"dendeneme"`   |
+| `repeat(count)`           | Stringi count kadar tekrar eder                      | `"ha".repeat(3)` -> `"hahaha"`                               |
+| `split(separator)`        | Stringi ayırıp dizi yapar                            | `"elma,armut,muz".split(",")` -> `["elma","armut","muz"]`    |
+| `concat(str)`             | Stringleri birleştirir                               | `"Merhaba".concat(" ", "Dünya")` -> `"Merhaba Dünya"`        |
+| `match(regex)`            | Regex eşleşmelerini dizi olarak döner                | `"123abc456".match(/\d+/g)` -> `["123","456"]`               |
+| `search(regex)`           | Regex ilk eşleşme indeksini döner                    | `"123abc".search(/[a-z]/)` -> `3`                            |
+| `localeCompare(str)`      | Sözlük sırasına göre karşılaştırır (sayı döner)      | `"a".localeCompare("b")` -> `-1`                             |
+| `padStart(len, padStr)`   | Baştaki karakterlerle belirtilen uzunluğa tamamlar   | `"5".padStart(3,"0")` -> `"005"`                             |
+| `padEnd(len, padStr)`     | Sondaki karakterlerle belirtilen uzunluğa tamamlar   | `"5".padEnd(3,"0")` -> `"500"`                               |

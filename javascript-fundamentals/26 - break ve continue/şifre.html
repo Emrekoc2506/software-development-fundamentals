@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Pro - Şifre Sıfırlama</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sansA-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1f2029;
+            overflow: hidden;
+        }
+
+        /* Arka Plan Dekorasyonları */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(#00f260, #0575e6); /* Yeşil-Mavi tonlar */
+            border-radius: 50%;
+            transform: translate(-150px, -100px);
+            filter: blur(100px);
+            z-index: -1;
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: linear-gradient(#8e2de2, #4a00e0); /* Mor tonlar */
+            border-radius: 50%;
+            transform: translate(150px, 150px);
+            filter: blur(100px);
+            z-index: -1;
+        }
+
+        /* Ana Kart */
+        .reset-box {
+            position: relative;
+            width: 420px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+        }
+
+        .reset-box h2 {
+            color: #fff;
+            text-align: center;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .reset-box p {
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+
+        /* Input Alanı */
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px;
+            padding-right: 45px; /* İkon için boşluk */
+            background: rgba(0, 0, 0, 0.2);
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1em;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #00f260; /* Focus olunca yeşil çerçeve */
+            box-shadow: 0 0 10px rgba(0, 242, 96, 0.2);
+        }
+
+        /* Göz İkonu (Şifre Göster/Gizle) */
+        .toggle-eye {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255,255,255,0.6);
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        /* Şifre Gereksinim Listesi */
+        .validation-list {
+            list-style: none;
+            margin-bottom: 25px;
+            background: rgba(0,0,0,0.2);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .validation-list li {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85em;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .validation-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .validation-list li ion-icon {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        /* Şart Sağlandığında Çalışacak Class */
+        .validation-list li.valid {
+            color: #00f260; /* Yeşil Renk */
+            font-weight: 600;
+            text-shadow: 0 0 5px rgba(0, 242, 96, 0.5);
+        }
+
+        /* Buton */
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #fff;
+            border: none;
+            border-radius: 30px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #00f260;
+            color: #1f2029;
+            box-shadow: 0 0 20px #00f260;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="reset-box">
+        <h2>Yeni Şifre Belirle</h2>
+        <p>Hesabın için güçlü bir şifre oluştur.</p>
+
+        <div class="input-group">
+            <input type="password" id="passwordInput" placeholder="Yeni Şifreniz">
+            <ion-icon name="eye-off-outline" class="toggle-eye" id="toggleBtn" onclick="togglePassword()"></ion-icon>
+        </div>
+
+        <ul class="validation-list">
+            <li id="length">
+                <ion-icon name="ellipse-outline"></ion-icon> En az 8 karakter
+            </li>
+            <li id="upper">
+                <ion-icon name="ellipse-outline"></ion-icon> En az 1 Büyük Harf
+            </li>
+            <li id="number">
+                <ion-icon name="ellipse-outline"></ion-icon> En az 1 Rakam
+            </li>
+            <li id="special">
+                <ion-icon name="ellipse-outline"></ion-icon> En az 1 Sembol (!@#$)
+            </li>
+        </ul>
+
+        <button onclick="checkSuccess()">ŞİFREYİ KAYDET</button>
+    </div>
+    
+    <div style="text-align: center; margin-top: 20px;">
+    <a href="giriş.html" style="color: #fff; text-decoration: none; font-size: 0.9em;">
+        <ion-icon name="arrow-back-outline"></ion-icon> Giriş Ekranına Dön
+    </a>
+</div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        // Elementleri Seçelim
+        const passwordInput = document.getElementById('passwordInput');
+        const toggleBtn = document.getElementById('toggleBtn');
+        
+        const lengthReq = document.getElementById('length');
+        const upperReq = document.getElementById('upper');
+        const numberReq = document.getElementById('number');
+        const specialReq = document.getElementById('special');
+
+        // Regex Desenleri (Filtreleme Mantığı)
+        const patterns = {
+            upper: /[A-Z]/,      // Büyük harf kontrolü
+            number: /[0-9]/,     // Rakam kontrolü
+            special: /[!@#\$%\^\&*\)\(+=._-]/ // Özel karakter kontrolü
+        };
+
+        // Klavye her tuşa basıldığında çalışacak fonksiyon
+        passwordInput.addEventListener('keyup', function(e) {
+            const value = e.target.value;
+
+            // 1. Uzunluk Kontrolü (8 karakter)
+            if(value.length >= 8) {
+                validStyle(lengthReq);
+            } else {
+                invalidStyle(lengthReq);
+            }
+
+            // 2. Büyük Harf Kontrolü
+            if(patterns.upper.test(value)) {
+                validStyle(upperReq);
+            } else {
+                invalidStyle(upperReq);
+            }
+
+            // 3. Rakam Kontrolü
+            if(patterns.number.test(value)) {
+                validStyle(numberReq);
+            } else {
+                invalidStyle(numberReq);
+            }
+
+            // 4. Sembol Kontrolü
+            if(patterns.special.test(value)) {
+                validStyle(specialReq);
+            } else {
+                invalidStyle(specialReq);
+            }
+        });
+
+        // Stil Değiştirme Fonksiyonları
+        function validStyle(element) {
+            element.classList.add('valid');
+            element.querySelector('ion-icon').setAttribute('name', 'checkmark-circle-outline');
+        }
+
+        function invalidStyle(element) {
+            element.classList.remove('valid');
+            element.querySelector('ion-icon').setAttribute('name', 'ellipse-outline');
+        }
+
+        // Şifre Göster/Gizle Fonksiyonu
+        function togglePassword() {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                toggleBtn.setAttribute('name', 'eye-outline');
+            } else {
+                passwordInput.type = "password";
+                toggleBtn.setAttribute('name', 'eye-off-outline');
+            }
+        }
+        
+        function checkSuccess() {
+            // Basit bir kontrol, gerçek projede backend'e istek atılır
+            if(document.querySelectorAll('.valid').length === 4) {
+                alert("Mükemmel! Şifre kriterleri sağlandı.");
+            } else {
+                alert("Lütfen tüm kriterleri sağlayın.");
+            }
+        }
+    </script>
+
+</body>
+</html>

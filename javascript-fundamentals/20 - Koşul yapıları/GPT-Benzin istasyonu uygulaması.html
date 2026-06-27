@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yakıt Hesaplama</title>
+</head>
+<body>
+<script>
+    // Fiyatlar
+    const dizel  = 50;
+    const benzin = 45;
+    const lpg    = 30;
+
+    // Kullanıcıdan yakıt türü seçmesi isteniyor
+    let yakitturu = prompt("Yakıt türünü seçiniz:\n1 - Dizel\n2 - Benzin\n3 - LPG");
+
+    // Eğer kullanıcı 1, 2 veya 3 dışında bir şey girerse hata mesajı gösterilir
+    if (yakitturu !== "1" && yakitturu !== "2" && yakitturu !== "3") {
+        alert("Geçerli bir yakıt türü seçiniz (1, 2, 3)!");
+    } else {
+        // Litre girişi
+        let litre = Number(prompt("Kaç litre yakıt alınacak?"));
+
+        // Litre geçerli değilse
+        if (litre <= 0 || isNaN(litre)) {
+            alert("Geçerli bir litre miktarı giriniz.");
+        } else {
+            // Bakiye girişi
+            let bakiye = Number(prompt("Bakiye giriniz:"));
+
+            // Bakiye geçerli değilse
+            if (isNaN(bakiye) || bakiye <= 0) {
+                alert("Geçerli bir bakiye giriniz!");
+            } else {
+                let fiyat = 0;
+                let yakitAdi = "";
+
+                // Yakıt türüne göre fiyat belirleniyor
+                if (yakitturu === "1") {
+                    fiyat = dizel;
+                    yakitAdi = "Dizel";
+                } else if (yakitturu === "2") {
+                    fiyat = benzin;
+                    yakitAdi = "Benzin";
+                } else if (yakitturu === "3") {
+                    fiyat = lpg;
+                    yakitAdi = "LPG";
+                }
+
+                // Toplam fiyat hesaplanıyor
+                let toplamTutar = fiyat * litre;
+
+                // Yeterli bakiye var mı kontrolü
+                if (bakiye >= toplamTutar) {
+                    let kalanBakiye = bakiye - toplamTutar;
+                    alert(`${yakitAdi} için toplam tutar: ${toplamTutar} TL\nKalan bakiye: ${kalanBakiye} TL`);
+                } else {
+                    let eksikBakiye = toplamTutar - bakiye;
+                    alert(`Yeterli bakiyeniz yok! Eksik bakiye: ${eksikBakiye} TL`);
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

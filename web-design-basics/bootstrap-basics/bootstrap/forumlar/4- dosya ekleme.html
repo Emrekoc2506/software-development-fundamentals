@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bootstrap Grid Test</title>
+
+<!-- ✅ Bootstrap CSS bağlantısı -->
+<link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <div class="mb-3">
+<!-- Standart dosya yükleme etiketi -->
+<label for="formFile" class="form-label">Default file input example</label>
+<!-- Dosya seçmek için input -->
+<input class="form-control" type="file" id="formFile">
+<!-- 
+    class="form-control": Bootstrap stilini uygular
+    type="file": dosya seçmek için input tipi
+    id="formFile": label ile ilişkilendirir
+-->
+</div>
+
+<div class="mb-3">
+<!-- Birden fazla dosya seçilebilen input etiketi -->
+<label for="formFileMultiple" class="form-label">Multiple files input example</label>
+<!-- Multiple özelliği ile birden fazla dosya seçilebilir -->
+<input class="form-control" type="file" id="formFileMultiple" multiple>
+<!-- 
+    multiple: aynı anda birden fazla dosya seçilebilir
+-->
+</div>
+
+<div class="mb-3">
+<!-- Devre dışı bırakılmış dosya seçme inputu -->
+<label for="formFileDisabled" class="form-label">Disabled file input example</label>
+<input class="form-control" type="file" id="formFileDisabled" disabled>
+<!-- 
+    disabled: kullanıcı bu inputla etkileşemez (seçim yapamaz)
+-->
+</div>
+
+<div class="mb-3">
+<!-- Küçük boyutlu dosya seçme inputu -->
+<label for="formFileSm" class="form-label">Small file input example</label>
+<input class="form-control form-control-sm" id="formFileSm" type="file">
+<!-- 
+    form-control-sm: Bootstrap’in küçük boyut stili
+-->
+</div>
+
+<div>
+<!-- Büyük boyutlu dosya seçme inputu -->
+<label for="formFileLg" class="form-label">Large file input example</label>
+<input class="form-control form-control-lg" id="formFileLg" type="file">
+<!-- 
+    form-control-lg: Bootstrap’in büyük boyut stili
+-->
+</div>
+
+
+</body>
+</html>

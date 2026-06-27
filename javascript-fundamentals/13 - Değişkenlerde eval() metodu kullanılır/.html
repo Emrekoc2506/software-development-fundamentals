@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /**
+        *! evel() : Kendine parametre olarak verilen değerleri Javascript kodlamasına çevirerek komut gibi çalıştırır ve oluşan değeri geriye döndürür.
+        */
+
+        var degerbir = 10;
+        var degeriki = 20;
+    
+        // Bu sadece metni yazdırır, işlem yapmaz
+        var sonucbir = "degerbir + degeriki<br />";
+    
+        // Eval kullanımı: değişkenlerin toplamını hesaplar
+        var sonuciki = eval("degerbir + degeriki");
+    
+        document.write(sonucbir);   // "degerbir + degeriki" metnini yazar
+        document.write(sonuciki);   // 10 + 20 = 30 sonucunu yazar
+    </script>
+    
+</body>
+</html>

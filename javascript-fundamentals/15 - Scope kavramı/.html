@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/** 
+
+------------------ SCOPE (KAPSAM) ------------------ 
+*!    ->Globel Scope 
+*!    ->Functon Scope
+*!    ->Block Scope
+
+*/
+
+var a = 6 ; // Globel Scope : Sen buna heryerden erişebilirsin
+
+if(true){
+
+}
+
+function method1(){
+    var sayi = 10 ; // Functon Scope : Bu değişken sadece bu fonksiyonun içinde geçerlidir
+    console.log(sayi); 
+    console.log(a)
+    
+}
+method1()
+</script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,21 @@
+// push()      - Dizinin sonuna eleman ekler.
+// pop()       - Dizinin son elemanını çıkarır ve döner.
+// shift()     - Dizinin ilk elemanını çıkarır ve döner.
+// unshift()   - Dizinin başına eleman ekler.
+// forEach()   - Dizinin her elemanı için verilen fonksiyonu çalıştırır.
+// map()       - Dizinin her elemanına fonksiyon uygular ve yeni bir dizi döner.
+// filter()    - Şartı sağlayan elemanlardan yeni dizi oluşturur.
+// find()      - Şartı sağlayan ilk elemanı döner.
+// findIndex() - Şartı sağlayan ilk elemanın indeksini döner.
+// includes()  - Dizide belirtilen eleman var mı, boolean döner.
+// indexOf()   - Elemanın dizideki ilk indeksini döner, yoksa -1.
+// slice()     - Dizinin belirtilen aralıktaki kısmını yeni dizi olarak döner.
+// splice()    - Diziden eleman siler ve/veya ekler, değişiklik yapar.
+// concat()    - Dizileri birleştirip yeni dizi oluşturur.
+// join()      - Dizinin elemanlarını birleştirip string yapar.
+// reverse()   - Diziyi tersine çevirir (yerinde değiştirir).
+// sort()      - Diziyi sıralar (string sıralaması varsayılan).
+// every()     - Tüm elemanlar şartı sağlıyorsa true döner.
+// some()      - En az bir eleman şartı sağlıyorsa true döner.
+// reduce()    - Dizinin elemanlarını tek bir değere indirger.
+// flat()      - Çok katmanlı diziyi düzleştirir.

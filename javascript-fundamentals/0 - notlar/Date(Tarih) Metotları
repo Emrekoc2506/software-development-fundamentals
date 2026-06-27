@@ -1,0 +1,27 @@
+| Metot                      | Ne Yapar?                                           | Örnek                                             |
+| -------------------------- | --------------------------------------------------- | ------------------------------------------------- |
+| `new Date()`               | Şu anki tarih ve zamanı oluşturur                   | `let now = new Date();`                           |
+| `new Date(y,m,d,h,m,s,ms)` | Belirli tarih ve zamanı oluşturur (Ay 0'dan başlar) | `new Date(2023,4,26,15,30,45)`                    |
+| `getFullYear()`            | Yılı alır                                           | `now.getFullYear() // 2025`                       |
+| `getMonth()`               | Ayı alır (0=Ocak, 11=Aralık)                        | `now.getMonth() // 4 (Mayıs)`                     |
+| `getDate()`                | Ayın gününü alır (1-31)                             | `now.getDate() // 26`                             |
+| `getHours()`               | Saati alır (0-23)                                   | `now.getHours() // 15`                            |
+| `getMinutes()`             | Dakikayı alır (0-59)                                | `now.getMinutes() // 30`                          |
+| `getSeconds()`             | Saniyeyi alır (0-59)                                | `now.getSeconds() // 45`                          |
+| `getMilliseconds()`        | Milisaniyeyi alır (0-999)                           | `now.getMilliseconds() // 0-999`                  |
+| `getDay()`                 | Haftanın gününü alır (0=Pazar, 6=Cumartesi)         | `now.getDay() // 5 (Cuma)`                        |
+| `getTime()`                | 1 Ocak 1970'den beri geçen milisaniye sayısı        | `now.getTime() // 1685125845000`                  |
+| `toDateString()`           | Tarihi okunabilir stringe çevirir                   | `now.toDateString() // "Fri May 26 2023"`         |
+| `toTimeString()`           | Zamanı stringe çevirir                              | `now.toTimeString() // "15:30:45 GMT+0300"`       |
+| `toISOString()`            | ISO formatında tarih stringi verir                  | `now.toISOString() // "2023-05-26T12:30:45.000Z"` |
+
+
+
+| Metot                      | Ne Yapar?                                           | Örnek                                             |
+| --------------------       | -------------------                                 | -----------------------                           |
+| `setFullYear(yıl)`         | Yılı ayarlar                                        | `now.setFullYear(2025)`                           |
+| `setMonth(ay)`             | Ayı ayarlar (0-11)                                  | `now.setMonth(11)`                                |
+| `setDate(gün)`             | Ayın gününü ayarlar                                 | `now.setDate(31)`                                 |
+| `setHours(saat)`           | Saati ayarlar                                       | `now.setHours(23)`                                |
+| `setMinutes(dakika)`       | Dakikayı ayarlar                                    | `now.setMinutes(59)`                              |
+| `setSeconds(saniye)`       | Saniyeyi ayarlar                                    | `now.setSeconds(59)`                              |

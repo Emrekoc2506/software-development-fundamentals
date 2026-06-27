@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//📅 Date (Tarih) Metotları:
+
+//🆕 Şu anki tarih ve zamanı oluşturma
+let now = new Date();
+console.log("Şu anki tarih ve saat:", now);
+
+//📅 Belirli bir tarih oluşturma (YYYY, MM, DD, hh, mm, ss, ms)
+let specificDate = new Date(2023, 4, 26, 15, 30, 45); // Mayıs ayı 26, 15:30:45
+console.log("Belirli tarih:", specificDate);
+
+//📆 Yıl Alma
+console.log("Yıl (getFullYear):", now.getFullYear());
+
+//📅 Ay Alma (0-11 arası, 0 = Ocak)
+console.log("Ay (getMonth):", now.getMonth());
+
+//📅 Gün Alma (Ayın günü, 1-31)
+console.log("Gün (getDate):", now.getDate());
+
+//⏰ Saat Alma
+console.log("Saat (getHours):", now.getHours());
+
+//⏳ Dakika Alma
+console.log("Dakika (getMinutes):", now.getMinutes());
+
+//⏲️ Saniye Alma
+console.log("Saniye (getSeconds):", now.getSeconds());
+
+//🕰️ Milisaniye Alma
+console.log("Milisaniye (getMilliseconds):", now.getMilliseconds());
+
+//📅 Haftanın günü (0=Pazar, 1=Pazartesi,...)
+console.log("Haftanın günü (getDay):", now.getDay());
+
+//🕒 Zaman Damgası (1 Ocak 1970'den itibaren milisaniye)
+console.log("Zaman damgası (timestamp):", now.getTime());
+
+//🕐 Tarihi stringe çevirme
+console.log("toDateString():", now.toDateString());
+console.log("toTimeString():", now.toTimeString());
+console.log("toISOString():", now.toISOString());
+
+//🛠️ Tarihi ayarlama metotları
+
+// Yıl ayarlama
+now.setFullYear(2025);
+console.log("Yeni yıl:", now.getFullYear());
+
+// Ay ayarlama
+now.setMonth(11);  // Aralık (0-11)
+console.log("Yeni ay:", now.getMonth());
+
+// Gün ayarlama
+now.setDate(31);
+console.log("Yeni gün:", now.getDate());
+
+// Saat ayarlama
+now.setHours(23);
+console.log("Yeni saat:", now.getHours());
+
+// Dakika ayarlama
+now.setMinutes(59);
+console.log("Yeni dakika:", now.getMinutes());
+
+// Saniye ayarlama
+now.setSeconds(59);
+console.log("Yeni saniye:", now.getSeconds());
+
+</script>
+</body>
+</html>
